@@ -1,7 +1,7 @@
 # Package
 `github.com/tappoy/crypto-cli`
 
-See [Document.txt](Document.txt)
+See [Usage.txt](Usage.txt)
 
 # Why it is this way.
 See [Philosophy](https://github.com/tappoy/philosophy) for more details.

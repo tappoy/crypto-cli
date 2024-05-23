@@ -3,7 +3,6 @@ WORKING_DIRS=tmp bin
 
 SRC=*.go
 BIN=bin/$(shell basename $(CURDIR))
-DOC=Document.txt
 COVER=tmp/cover
 COVER0=tmp/cover0
 
@@ -12,7 +11,7 @@ COVER0=tmp/cover0
 $(BIN): $(SRC) go.sum Usage.txt
 	go build -o $(BIN)
 
-all: $(WORKING_DIRS) fmt build test $(DOC) lint
+all: $(WORKING_DIRS) fmt $(BIN) test lint
 
 clean:
 	rm -rf $(WORKING_DIRS) go.sum
@@ -28,9 +27,6 @@ go.sum: go.mod
 
 test: $(BIN)
 	go test -v -tags=mock -vet=all -cover -coverprofile=$(COVER)
-
-$(DOC): $(SRC)
-	go doc -all . > $(DOC)
 
 cover: $(COVER)
 	grep "0$$" $(COVER) | sed 's!$(PACKAGE)!.!' | tee $(COVER0)
