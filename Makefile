@@ -9,7 +9,7 @@ COVER0=tmp/cover0
 
 .PHONY: all clean fmt cover test lint
 
-$(BIN): $(SRC) go.sum
+$(BIN): $(SRC) go.sum Usage.txt
 	go build -o $(BIN)
 
 all: $(WORKING_DIRS) fmt build test $(DOC) lint
