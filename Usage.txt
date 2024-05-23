@@ -7,13 +7,6 @@ Commands:
   version               Show version
   help                  Show this usage
 
-Commands not implemented yet:
-  gzc      <src> <dst>  gzip and encrypt src to dst
-  xgzc     <src> <dst>  extract gzc src to dst
-  tgzc     <src> <dst>  tar, gzip and encrypt src to dst
-  xtgzc    <src> <dst>  extract tgzc src to dst
-  genpw                 Generate a random password
-
 Arguments:
   src:  Source file. If command includes tar, it can be a dir
   dst:  Destination file or dir
