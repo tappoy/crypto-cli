@@ -1,0 +1,25 @@
+Usage:
+$ crypto-cli <command>
+
+Commands:
+  c        <src> <dst>  encrypt src to dst
+  xc       <src> <dst>  decrypt src to dst
+  version               Show version
+  help                  Show this usage
+
+Commands not implemented yet:
+  gzc      <src> <dst>  gzip and encrypt src to dst
+  xgzc     <src> <dst>  extract gzc src to dst
+  tgzc     <src> <dst>  tar, gzip and encrypt src to dst
+  xtgzc    <src> <dst>  extract tgzc src to dst
+  genpw                 Generate a random password
+
+Arguments:
+  src:  Source file. If command includes tar, it can be a dir
+  dst:  Destination file or dir
+
+  If dst is "-", it means stdout.
+
+You must give a password through the prompt when encrypting or decrypting.
+The password must be 8 to 32 characters.
+You can give the password from stdin.
